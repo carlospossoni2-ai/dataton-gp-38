@@ -89,7 +89,8 @@ def carregar_dados():
     current_dir = os.path.dirname(__file__)  # pasta onde está o app.py
     csv_path = os.path.join(current_dir, "vagas_curriculo.csv")
     df_vagas = pd.read_csv(csv_path)
-    with open("embeddings_vagas.pkl", "rb") as f:
+    pkl_path = os.path.join(current_dir, "embeddings_vagas.pkl")
+    with open(pkl_path, "rb") as f:
         embeddings_vagas = pickle.load(f)
     return df_vagas, embeddings_vagas
 
