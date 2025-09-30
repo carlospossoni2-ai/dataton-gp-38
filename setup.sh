@@ -8,5 +8,6 @@ python -m pip install --upgrade pip
 # Instalar dependências do projeto
 pip install -r requirements.txt
 
-echo "✅ Ambiente pronto! Agora você pode rodar:"
+echo "✅ Ambiente pronto! Agora você pode rodar!"
 echo "streamlit run app/app.py"
+streamlit run app/app.py
