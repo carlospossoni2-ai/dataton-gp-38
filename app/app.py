@@ -22,6 +22,7 @@ st.set_page_config(page_title="Recomendador de Vagas", layout="centered")
 # -----------------------------
 nltk.download('stopwords', quiet=True)
 nlp = spacy.load("pt_core_news_sm")
+current_dir = os.path.dirname(__file__)  # pasta onde está o app.py
 
 # -----------------------------
 # Funções de pré-processamento
@@ -86,7 +87,6 @@ def carregar_modelo():
 
 @st.cache_data
 def carregar_dados():
-    current_dir = os.path.dirname(__file__)  # pasta onde está o app.py
     csv_path = os.path.join(current_dir, "vagas_curriculo.csv")
     df_vagas = pd.read_csv(csv_path)
     pkl_path = os.path.join(current_dir, "embeddings_vagas.pkl")
