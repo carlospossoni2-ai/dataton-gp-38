@@ -123,7 +123,8 @@ if submitted:
         st.error("Por favor, insira o conteúdo do seu currículo.")
 
 st.subheader("Exemplo de Currículo")
-with open("curriculo_teste.pdf", "rb") as f:
+cv_path = os.path.join(current_dir, "curriculo_teste.pdf")
+with open(cv_path, "rb") as f:
     pdf_bytes = f.read()
 
 st.download_button(
