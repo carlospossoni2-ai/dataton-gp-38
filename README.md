@@ -15,8 +15,10 @@ O app também disponibiliza um **currículo de exemplo** para download e visuali
 - **Pickle**: Armazenamento de embeddings pré-calculados
 ## Como Rodar o App Localmente
 1. Clone o repositório:
-    git clone https://github.com/carlospossoni2-ai/dataton-gp-38.git
-    cd dataton-gp-38
+-    git clone https://github.com/carlospossoni2-ai/dataton-gp-38.git
+-    cd dataton-gp-38
+  
 Execute o setup do projeto:
-    ./setup.py
+-    ./setup.py
+    
 ## Como treinar o modelo novamente
