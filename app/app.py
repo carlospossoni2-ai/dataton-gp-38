@@ -85,8 +85,8 @@ def carregar_modelo():
 
 @st.cache_data
 def carregar_dados():
-    df_vagas = pd.read_csv("src/vagas_curriculo.csv")
-    with open("src/embeddings_vagas.pkl", "rb") as f:
+    df_vagas = pd.read_csv("vagas_curriculo.csv")
+    with open("embeddings_vagas.pkl", "rb") as f:
         embeddings_vagas = pickle.load(f)
     return df_vagas, embeddings_vagas
 
