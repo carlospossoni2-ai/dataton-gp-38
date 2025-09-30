@@ -10,6 +10,7 @@ import spacy
 import pickle
 import streamlit as st
 from sentence_transformers import SentenceTransformer, util
+import os
 
 # -----------------------------
 # Configuração da página Streamlit
@@ -85,7 +86,9 @@ def carregar_modelo():
 
 @st.cache_data
 def carregar_dados():
-    df_vagas = pd.read_csv("vagas_curriculo.csv")
+    current_dir = os.path.dirname(__file__)  # pasta onde está o app.py
+    csv_path = os.path.join(current_dir, "vagas_curriculo.csv")
+    df_vagas = pd.read_csv(csv_path)
     with open("embeddings_vagas.pkl", "rb") as f:
         embeddings_vagas = pickle.load(f)
     return df_vagas, embeddings_vagas
