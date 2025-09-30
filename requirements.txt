@@ -1,0 +1,10 @@
+pandas==2.2.2
+numpy==1.26.0
+matplotlib==3.10.0
+seaborn==0.13.2
+nltk==3.9.1
+scikit-learn==1.6.1
+spacy==3.8.7
+torch==2.8.0
+sentence-transformers==5.1.0
+https://github.com/explosion/spacy-models/releases/download/pt_core_news_sm-3.8.0/pt_core_news_sm-3.8.0.tar.gz
